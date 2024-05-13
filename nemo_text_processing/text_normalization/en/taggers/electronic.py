@@ -49,6 +49,7 @@ class ElectronicFst(GraphFst):
         else:
             numbers = pynutil.insert(" ") + cardinal.long_numbers + pynutil.insert(" ")
 
+<<<<<<< HEAD
         cc_cues = pynutil.add_weight(
             pynini.string_file(get_abs_path("data/electronic/cc_cues.tsv")),
             MIN_NEG_WEIGHT,
@@ -58,6 +59,9 @@ class ElectronicFst(GraphFst):
             pynini.string_file(get_abs_path("data/electronic/cc_cues.tsv")),
             MIN_NEG_WEIGHT,
         )
+=======
+        cc_cues = pynutil.add_weight(pynini.string_file(get_abs_path("data/electronic/cc_cues.tsv")), MIN_NEG_WEIGHT)
+>>>>>>> fbcb4e84 (read card numbers as digits)
 
         accepted_symbols = pynini.project(pynini.string_file(get_abs_path("data/electronic/symbol.tsv")), "input")
 
