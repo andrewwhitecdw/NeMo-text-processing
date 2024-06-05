@@ -10,6 +10,7 @@ pipeline {
     disableConcurrentBuilds(abortPrevious: true)
   }
   environment {
+<<<<<<< HEAD
     AR_TN_CACHE='/home/jenkins/TestData/text_norm/ci/grammars/06-11-26-0'
     DE_TN_CACHE='/home/jenkins/TestData/text_norm/ci/grammars/10-23-24-0'
     EN_TN_CACHE='/home/jenkins/TestData/text_norm/ci/grammars/06-11-26-1'
@@ -31,6 +32,25 @@ pipeline {
     HI_TN_CACHE='/home/jenkins/TestData/text_norm/ci/grammars/06-04-26-5'
     KO_TN_CACHE='/home/jenkins/TestData/text_norm/ci/grammars/06-04-25-6'
     DEFAULT_TN_CACHE='/home/jenkins/TestData/text_norm/ci/grammars/06-08-23-0'
+=======
+
+    AR_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/10-23-23-0'
+    DE_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+    EN_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-05-24-0'
+    ES_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/10-27-23-0'
+    ES_EN_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-13-23-2'
+    FR_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/12-05-23-0'
+    HU_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+    PT_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+    RU_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+    VI_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+    SV_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+    ZH_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/07-27-23-0'
+    IT_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/10-26-23-0'
+    HY_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/03-12-24-0'
+    MR_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/03-12-24-1'
+    DEFAULT_TN_CACHE='/home/jenkinsci/TestData/text_norm/ci/grammars/06-08-23-0'
+>>>>>>> 9e0198dc (update jenkins)
   }
   stages {
 
