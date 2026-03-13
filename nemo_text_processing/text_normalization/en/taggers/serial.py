@@ -173,9 +173,10 @@ class SerialFst(GraphFst):
                 if k not in SERIAL_SYMBOLS_AS_DELIMITERS and k not in SERIAL_AMPERSAND_SYMBOLS
             ]
         )
-        symbols_graph = symbols_graph_no_ampersand | pynini.cross("#", "hash") | SERIAL_AMPERSAND
-        num_graph_pure |= symbols_graph
-        num_graph_alnum |= symbols_graph
+        # exclude "&" to handle acronyms separately
+        accepted_symbols = pynini.difference(pynini.project(symbols_graph, "input"), pynini.accep("&"))
+        symbols_graph = accepted_symbols @ symbols_graph
+        num_graph |= symbols_graph
 
         if not self.deterministic and not lm:
             num_graph_pure |= cardinal.single_digits_graph
