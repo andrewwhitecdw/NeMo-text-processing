@@ -25,7 +25,7 @@ class CardinalFst(GraphFst):
         super().__init__(name="cardinal", kind="classify", deterministic=deterministic)
 
         # Optional small whitespace inside parentheses or after signs
-        ws = pynini.closure(NEMO_SPACE, 0, 2)
+        ws = pynini.closure(pynutil.delete(NEMO_SPACE), 0, 2)
 
         # Load base .tsv files
         graph_zero = pynini.string_file(get_abs_path("data/number/zero.tsv"))
