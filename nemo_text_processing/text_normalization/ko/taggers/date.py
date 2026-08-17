@@ -240,12 +240,7 @@ class DateFst(GraphFst):
             )
             |
             # no era: 1~4 digits, no leading zero
-            (
-                pynutil.insert("year: \"")
-                + (YEAR_1TO4 @ graph_cardinal)
-                + pynini.accep("년")
-                + pynutil.insert("\"")
-            )
+            (pynutil.insert("year: \"") + (YEAR_1TO4 @ graph_cardinal) + pynini.accep("년") + pynutil.insert("\""))
         ).optimize()
 
         individual_month_component = (
